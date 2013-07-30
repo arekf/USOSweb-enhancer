@@ -1,0 +1,272 @@
+/**
+ *  Jagiellonian University's USOSweb enhancer
+ *  ==========================================
+ * 
+ * @author Arkadiusz Fal <http://arekf.net>
+ * @version 0.1
+ *
+ * The MIT License (MIT)
+ *
+ * Copyright (c) 2013 Arkadiusz Fal
+ * 
+ * Permission is hereby granted, free of charge, to any person obtaining a copy of
+ * this software and associated documentation files (the "Software"), to deal in
+ * the Software without restriction, including without limitation the rights to
+ * use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+ * the Software, and to permit persons to whom the Software is furnished to do so,
+ * subject to the following conditions:
+ * 
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ * 
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+ * FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+ * COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+ * IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+ * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ */
+ 
+ 
+/*
+ * Font settings
+ */
+ 
+* 
+{
+	font-family: 'Lucida Grande' !important;	
+}
+
+/*
+ * Set page width to 1000px
+ */
+
+html,
+body, 
+#layout-container,
+#layout-t
+{
+	min-width: 1000px !important;
+	max-width: 1000px !important;
+	margin: auto !important;
+}
+
+#layout-c21
+{
+	max-width: 1000px !important;
+}
+
+#layout-c22
+{
+	min-width: 912px !important;
+	max-width: 912px !important; /* 88px = padding + border */
+}
+
+/*
+ * Reset backgrounds
+ */
+
+#layout-container,
+#layout-r1
+{
+	background: none !important;
+}
+
+/*
+ * Remove language switcher
+ */
+ 
+#layout-c12 tbody tr:first-child
+{
+	display: none !important;
+}
+
+/*
+ * Remove logo image
+ */
+ 
+#layout-c11 
+{
+	display: none !important;
+}
+
+/*
+ * Move navigation
+ */
+ 
+#layout-c12
+{
+	display: block !important;
+}
+
+#layout-c12-t
+{
+	height: 0px !important;
+}
+
+/*
+ * Remove useless navigation items
+ */
+ 
+#layout-c12-t .m a.greyed, /* Staff section */
+#layout-c12-t .m a:nth-child(7), /* Help */
+#layout-c12-t .m a:nth-child(8) /* Contact USOS team */
+
+{
+	display: none !important;
+}
+
+/*
+ * Remove left column
+ */
+ 
+#layout-c21
+{
+	display: block !important;
+	float: left !important;
+}
+
+#layout-c22
+{
+	display: block !important;
+	float: left !important;
+}
+
+/*
+ * Top bar
+ */
+
+body > div.do_not_print > div
+{
+	background: #dddddd !important;
+	border-bottom: 4px solid #c0c0c0 !important;
+	width: 1000px !important;
+}
+
+body > div.do_not_print,
+body > div.do_not_print a,
+body > div.do_not_print b,
+body > div.do_not_print td
+{
+	font-size: 1.05em !important;
+	color: #797979 !important;
+}
+
+/*
+ * Navigation
+ */
+ 
+#layout-c12-t
+{
+	margin-top: 20px !important;
+}
+
+#layout-c12-t .m 
+{
+	text-align: center !important;
+}
+
+#layout-c12-t .m a
+{
+	background: #64A8D1 !important;
+	padding: 10px 15px !important;
+	text-transform: lowercase !important;
+	color: white !important;
+}
+
+#layout-c12-t .m a.highlighted,
+#layout-c12-t .m a.highlighted:hover
+{
+	box-shadow: none !important;
+	background: #0969A2 !important;
+}
+
+#layout-c12-t .m a:hover
+{
+	box-shadow: none !important;
+	background: #0969A2 !important;
+}
+
+/*
+ * Subnavigation
+ */
+ 
+#layout-c21
+{
+	background: #0969A2 !important;
+	margin-top: -53px !important;
+	width: 1000px !important;
+	min-height: 20px !important;
+	line-height: 25px;
+	padding: 10px 0 !important;
+	text-align: center !important;
+}
+
+#layout-c21 .subitems
+{
+	display: inline !important;
+}
+
+#layout-c21 .subitems .item
+{
+	display: inline !important;
+	font-size: 0.85em !important;
+	padding: 10px 5px !important;
+
+}
+
+#layout-c21 .subitems .item:last-child:after
+{
+	content:  ' ';
+	display: block;
+}
+#layout-c21 .item
+{
+	background: none !important;
+	display: inline !important;
+	padding: 10px !important;
+	white-space: nowrap !important;
+}
+
+#layout-c21 .item .highlighted
+{
+	color: white !important;
+	display: inline !important;
+}
+
+#layout-c21 .item a
+{
+	color: white !important;
+}
+
+#layout-c21 .item a:hover
+{
+	text-shadow: none !important;
+	text-decoration: underline !important;
+}
+
+#layout-c21 .bigarrow
+{
+	display: none !important;
+}
+
+/*
+ * Content
+ */
+
+#layout-c22
+{
+	margin-top: -14px !important;
+	border: 4px solid #0969A2 !important;
+	border-top: none !important;
+	padding-top: 40px !important;
+}
+
+/*
+ * Footer
+ */
+ 
+#layout-footer
+{
+	display: none !important;
+}
