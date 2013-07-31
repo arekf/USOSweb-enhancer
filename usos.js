@@ -18,13 +18,14 @@ document.addEventListener('DOMContentLoaded', function() {
 				hideTips: true,
 				
 				topBarContent: '<a href="https://www.uj.edu.pl/"><strong>Uniwersytet Jagielloński</a></strong>',
-				topBarMailboxLink: true,
+				topBarMailboxLink: false,
 				navigationMailboxLink: true
 			},
 				
 			init: function () {
 				this.fixHomeAnchor();
 				this.handleSubnavigation();
+				this.handleMailboxLinks();
 				this.fixTopBar();
 				this.hideTips();
 			},
@@ -54,6 +55,9 @@ document.addEventListener('DOMContentLoaded', function() {
 					}
 				});
 				
+				$('#layout-c12').mouseenter(function () {
+					$('.subitems').hide();
+				});
 				
 				$('#layout-c21 div.level1').mouseenter(function () {
 					$('.subitems').hide();
@@ -69,6 +73,29 @@ document.addEventListener('DOMContentLoaded', function() {
 				});
 			},
 			
+			handleMailboxLinks: function () {
+				if (!enhancer.settings.topBarMailboxLink) {
+					$('#casmenu td:nth-child(2) a:first-child').hide();
+				}
+				
+				if (enhancer.settings.navigationMailboxLink) {
+					var anchor = '<a class="mailbox">POCZTA</a>';
+					$('#layout-c12-t .m').prepend(anchor);
+					
+					$('a.mailbox').click(function () {
+						$('#layout-c12-t .m a').removeClass('highlighted');
+						$(this).addClass('highlighted');
+						$('#layout-c21').remove();
+						
+						$('#layout-c22').html('<iframe class="mailbox" src="https://mbox.uj.edu.pl"></iframe>');
+						$('#layout-c22').css('margin-top', '-65px', 'important');
+						$('#layout-c22').css('height', '720px', 'important');
+						
+						$(document).attr('title', 'poczta - USOSweb - Uniwersytet Jagielloński w Krakowie')
+					});
+				}
+			},
+			
 			fixTopBar: function () {
 				$('body > div.do_not_print table td:first-child').html(enhancer.settings.topBarContent);
 			},
@@ -81,5 +108,6 @@ document.addEventListener('DOMContentLoaded', function() {
 		};
 		
 		enhancer.init();
+		
 	})(jQuery);
 }, false);

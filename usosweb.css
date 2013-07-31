@@ -125,9 +125,7 @@ body,
  */
  
 #layout-c12-t .m a.greyed, /* Staff section */
-#layout-c12-t .m a:nth-child(7), /* Help */
-#layout-c12-t .m a:nth-child(8) /* Contact USOS team */
-
+#layout-c12-t .m a:nth-last-of-type(-n+2) /* Help && Contact USOS team */
 {
 	display: none !important;
 }
@@ -155,7 +153,7 @@ body,
 body > div.do_not_print > div
 {
 	background: #dddddd !important;
-	border-bottom: 4px solid #c0c0c0 !important;
+	border-bottom: 2px solid #c0c0c0 !important;
 	width: 1000px !important;
 }
 
@@ -226,9 +224,8 @@ body > div.do_not_print a.poczta
 	background: #0969a2 !important;
 	margin-top: -63px !important;
 	width: 1000px !important;
-	min-height: 20px !important;
-	line-height: 30px;
-	padding: 10px 0 25px 0 !important;
+	line-height: 26px;
+	padding: 14px 0 25px 0 !important;
 	text-align: center !important;
 }
 
@@ -271,6 +268,7 @@ body > div.do_not_print a.poczta
 #layout-c21 .subitems .item.level2 span.highlighted
 {
 	display: block !important;
+	padding: 0 20px !important;
 }
 
 #layout-c21 .item.dropdown
@@ -308,9 +306,8 @@ body > div.do_not_print a.poczta
 {
 	position: relative !important;
 	z-index: 1 !important;
-	margin-top: -14px !important;
+	margin-top: -14px;
 	border: 4px solid #0969a2 !important;
-	border-top: none !important;
 	padding-top: 10px !important;
 	margin-bottom: 20px !important;
 }
@@ -322,4 +319,17 @@ body > div.do_not_print a.poczta
 #layout-footer
 {
 	display: none !important;
+}
+
+/*
+ * Mailbox iframe
+ */
+ 
+iframe.mailbox
+{
+	border: none !important;
+	margin-left: -40px !important;
+	margin-top: -10px !important;
+	width: 992px !important;
+	height: 800px !important;
 }
